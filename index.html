@@ -1,12 +1,146 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
+    <head>
+        <meta charset="utf-8" />
+        <title>HTML Academy: Седона</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="blank.html">Информация</a></li>
+                    <li><a href="blank.html">Фото и видео</a></li>
+                    <li>
+                        <a><img src="https://via.placeholder.com/138x70" width="138" height="70" alt="logo" /></a>
+                    </li>
+                    <li><a href="blank.html">Карта штата</a></li>
+                    <li><a href="hotels.html">Гостиницы</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Туристический город Седона</h1>
+            <section>
+                <h2>Добро пожаловать в Седону</h2>
+                <p>Седона — небольшой городок в Аризоне,заслуживающий большего!</p>
+            </section>
+            <section>
+                <h2>Преимущества Седоны</h2>
+                <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+                <ul>
+                    <li>
+                        <h3>Настоящий городок</h3>
+                        <p>— №1 -</p>
+                        <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+                    </li>
+                    <li><img src="https://via.placeholder.com/800x256" width="800" height="256" alt="Фото города" /></li>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+                    <li>
+                        <ul>
+                            <li>
+                                <h4>Жилье</h4>
+                                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                            </li>
+                            <li>
+                                <h4>Еда</h4>
+                                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                            </li>
+                            <li>
+                                <h4>Сувениры</h4>
+                                <p>Не только китайского, но и местного производства!</p>
+                            </li>
+                        </ul>
+                    </li>
 
-  </body>
+                    <li><img src="https://via.placeholder.com/800x256" width="800" height="256" alt="Горные массивы" /></li>
+                    <li>
+                        <h3>Там есть Мост дьявола</h3>
+                        <p>— №2 —</p>
+                        <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                    </li>
+                    <li>
+                        <h3>Небольшая площадь</h3>
+                        <p>— №3 —</p>
+                        <p>Все достопримечательности находятся очень близко</p>
+                    </li>
+                    <li>
+                        <h3>Красивая дорога</h3>
+                        <p>— №4 —</p>
+                        <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
+                    </li>
+                    <li>
+                        <h3>Мало туристов</h3>
+                        <p>— №5 —</p>
+                        <p>Большинство едет в гранд каньон и толпится там</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Поиск гостиницы в Седоне</h2>
+                <p>Заинтересовались?</p>
+                <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+                <a href="hotels.html" class="button">Поиск гостиницы в Седоне</a>
+            </section>
+
+            <section>
+                <h2>Навигация</h2>
+                <img src="https://via.placeholder.com/1199x594" alt="Карта" />
+            </section>
+        </main>
+        <footer>
+            <section>
+                <h2>Контактные данные</h2>
+                <p>#VISITSEDONA</p>
+                <p><a href="tel:+78005558628">+7 800 555-86-28</a></p>
+            </section>
+
+            <section>
+                <h2>Социальные сети</h2>
+                <ul>
+                    <li>
+                        <a href="#">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="#">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#">YouTube</a>
+                    </li>
+                </ul>
+            </section>
+
+            <p>
+                Website by
+                <a><img src="https://via.placeholder.com/115x34" width="115" height="34" alt="logo htmlacademy" /></a>
+            </p>
+        </footer>
+
+        <section>
+            <h2>Поиск гостиницы в Седоне</h2>
+            <form action="https://echo.htmlacademy.ru" method="post">
+                <fieldset>
+                    <label for="arrival-date">Дата заезда:</label>
+                    <input type="date" name="calendar" id="arrival-date" />
+                </fieldset>
+                <fieldset>
+                    <label for="date-of-departure">Дата выезда:</label>
+                    <input type="date" name="calendar" id="date-of-departure" />
+                </fieldset>
+                <fieldset>
+                    <label for="number-of-adults">Взрослые:</label>
+                    <button type="button" disabled>-</button>
+                    <input id="number-of-adults" type="text" name="adults" placeholder="1" />
+                    <button type="button">+</button>
+                </fieldset>
+                <fieldset>
+                    <label for="number-of-childs">Дети:</label>
+                    <button type="button" disabled>-</button>
+                    <input id="number-of-childs" type="text" name="childs" placeholder="0" />
+                    <button type="button">+</button>
+                </fieldset>
+                <button type="submit">Найти</button>
+            </form>
+        </section>
+    </body>
 </html>
