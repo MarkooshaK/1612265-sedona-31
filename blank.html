@@ -1,55 +1,63 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
     <head>
         <meta charset="utf-8" />
         <title>HTML Academy: Седона</title>
-        <link rel="icon" href="favicon.ico">
-        <link rel="icon" href="img/favicon/favicon152.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="img/favicon/favicon180.png">
-        <link rel="manifest" href="manifest.webmanifest">
+        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="img/favicon/favicon152.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="img/favicon/favicon180.png" />
+        <link rel="manifest" href="manifest.webmanifest" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/style.css" />
     </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="blank.html">Информация</a></li>
+    <body class="page-body">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul class="site-nav">
+                    <li><a class="active" href="blank.html">Информация</a></li>
                     <li><a href="blank.html">Фото и видео</a></li>
                     <li>
-                        <a href="index.html"><img src="img/logo.svg" width="138" height="70" alt="Логотип" /></a>
+                        <a href="index.html" class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип" /></a>
                     </li>
                     <li><a href="blank.html">Карта штата</a></li>
                     <li><a href="hotels.html">Гостиницы</a></li>
                 </ul>
             </nav>
         </header>
-        <main></main>
+        <main class="container">
+            <section class="wip">
+                <p>Work in progress...</p>
+            </section>
+        </main>
 
-        <footer>
-            <section>
+        <footer class="main-footer">
+            <section class="сontact">
                 <h2>Контактные данные</h2>
                 <p>#VISITSEDONA</p>
                 <p><a href="tel:+78005558628">+7 800 555-86-28</a></p>
             </section>
 
-            <section>
+            <section class="socials">
                 <h2>Социальные сети</h2>
                 <ul>
                     <li>
-                        <a href="#">Twitter</a>
+                        <a class="socials__item twitter" href="#"></a>
                     </li>
                     <li>
-                        <a href="#">Facebook</a>
+                        <a class="socials__item facebook" href="#"></a>
                     </li>
                     <li>
-                        <a href="#">YouTube</a>
+                        <a class="socials__item youtube" href="#"></a>
                     </li>
                 </ul>
             </section>
 
             <p>
                 Website by
-                <a href="https://htmlacademy.ru/"><img src="img/logo_htmlacademy.svg" width="115" height="34" alt="logo htmlacademy" /></a>
+                <a href="https://htmlacademy.ru/"><img class="logo-academy" src="img/logo_htmlacademy.svg" width="115" height="34" alt="logo htmlacademy" /></a>
             </p>
         </footer>
     </body>
 </html>
+

@@ -1,0 +1,481 @@
+:root {
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-blue: #81B3D2;
+  --basic-dark-blue: #669EC0;
+  --basic-extra-dark-blue: #5496BD;
+  --basic-lighht-neutral: #EBEBEB;
+  --basic-light: #EEEEEE;
+  --basic-extra-light: #F2F2F2;
+  --basic-dark: #333333;
+  --basic-neutral: #A9A9A9;
+
+
+  --special: #766357;
+  --special-dark: #604E43;
+  --special-extra-dark: #503E33;
+}
+
+.page-body {
+  min-width: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-white);
+  overflow-x: hidden;
+  box-shadow: 0px 0px 10px 2px rgba(154, 154, 154, 0.5);
+}
+.page-body h1 {
+  display: none;
+}
+.page-body h2 {
+  display: none;
+}
+/* reset styles */
+
+ul li {
+  list-style: none;
+}
+a,
+button  {
+  text-decoration: none;
+  outline: none;
+}
+ul {
+  padding-inline-start: 0%;
+  margin: 0;
+}
+
+/* blank.html  */
+.wip {
+  height: 400px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
+/* navigation */
+
+.main-header {
+  height: 56px;
+}
+
+.main-nav {
+font-size: 14px;
+line-height: 26px;
+font-weight: 700;
+color: var(--basic-black);
+background-color: var(--basic-white);
+
+}
+.site-nav {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.site-nav li:nth-child(3) {
+  margin-bottom: -22px;
+}
+
+.site-nav a {
+  color: var(--basic-black);
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+
+  outline: none;
+  color: var(--basic-blue);
+}
+
+.site-nav a:active  {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.site-nav a.active:hover,
+.site-nav a.active,
+.site-nav a.active:active {
+  color: var(--special);
+  cursor: default;
+}
+
+
+.site-nav li:nth-child(3) a:active {
+  opacity: 1;
+}
+
+/*  welcome section */
+
+.welcome-img {
+
+  background:
+  url("../img/decor/welcome1.svg") no-repeat center 76px,
+  url("../img/decor/welcome2.svg") no-repeat center 215px,
+  transparent url("../img/decor/background-photo1.jpg") no-repeat center ;
+
+  height: 509px;
+}
+.welcome {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  height: 215px;
+}
+.welcome p {
+  text-align: center;
+}
+
+.search__hotel  a:hover,
+.search__hotel  a:focus {
+  background-color: var(--special-dark);
+  outline: none;
+  color: var(--basic-white);
+}
+.search__hotel a:active{
+background-color: var(--special-extra-dark);
+}
+.search__hotel a:active span {
+  opacity: 0.3;
+}
+
+
+
+/*  advantages sectoin  */
+.advantages p {
+  color: var(--basic-dark);
+}
+.advantages p:first-of-type {
+  text-align: center;
+}
+.advantages-1 {
+  width: 400px;
+  height: 256px;
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+  text-align: center;
+}
+.advantages-1 h3 {
+  margin: 50px;
+}
+
+.advantages-1 p  {
+  color: var(--basic-white);
+
+}
+.advantages__list h3,
+.advantages__list2 h4,
+.advantages__list3 h3 {
+  font-size: 21px;
+}
+
+.advantages__list {
+  display: flex;
+  height: 256px;
+  justify-content: center;
+}
+.advantages__list2 {
+  height: 330px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
+}
+
+
+.housing::before {
+  content: url(../img/decor/icon-house.svg);
+}
+
+.food::before  {
+
+  content: url(../img/decor/icon-burger.svg);
+
+}
+
+.souvenirs::before  {
+  content: url(../img/decor/icon-gift.svg);
+}
+
+.advantages-2 {
+  width: 400px;
+  height: 256px;
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+  text-align: center;
+}
+
+.advantages-2 p {
+  color: var(--basic-white);
+}
+.advantages-2 h3 {
+  margin: 50px;
+
+}
+.advantages__list li:nth-child(4) {
+  height: 256px;
+}
+
+.advantages__list3 {
+background-color: var(--basic-light);
+height: 256px;
+display: flex;
+width: 1200px;
+margin: auto;
+justify-content: space-around;
+text-align: center;
+}
+
+/* hotel search */
+
+.search__hotel {
+height: 290px;
+line-height: 24px;
+text-align: center;
+}
+.search__hotel p:first-of-type {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.button__search {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  width: 568px;
+  height: 86px;
+  background-color: var(--special);
+  color: var(--basic-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+}
+
+.map {
+  text-align: center;
+}
+/* main-footer */
+
+.main-footer  {
+  margin: -110px 0 0;
+  line-height: 26px;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 21px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  align-items: center;
+
+}
+.main-footer .сontact {
+  font-weight: 700;
+}
+.academy p {
+  font-size: 14px;
+}
+
+.socials__item {
+  background-color: var(--basic-blue);
+  width: 46px;
+  height: 48px;
+  display: inline-flex;
+  margin: 6px;
+  align-items: center;
+  justify-content: center;
+}
+.twitter::before {
+  content: url("../img/decor/twitter.svg");
+
+}
+
+.facebook::before {
+  content: url("../img/decor/fb-icon.svg");
+}
+.youtube::before {
+  content: url("../img/decor/youtube.svg");
+}
+.socials ul {
+  display: flex;
+}
+
+.socials__item:hover,
+.socials__item:focus {
+background-color: var(--basic-dark-blue);
+}
+
+.socials__item:active {
+  background-color: var(--basic-extra-dark-blue);
+}
+.socials__item:active::before {
+  opacity: 0.3;
+}
+
+
+
+.popap form{
+  height: 395px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popap fieldset,
+.popap input {
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.departure input,
+.arrival input {
+  height: 38px;
+  width: 346px;
+  background-color: var(--basic-light);
+}
+
+
+.number-of-visiters input {
+  background-color: var(--basic-light);
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  font-weight: 700;
+  outline: none;
+
+}
+
+.popap button {
+  width: 39px;
+  height: 38px;
+  border: none;
+  background-color: var(--basic-light);
+}
+
+ .popap .button-find-hotels {
+  text-transform: uppercase;
+   color: var(--basic-white);
+   line-height: 26px;
+   font-size: 21px;
+   font-weight: 700;
+   width: 458px;
+   height: 58px;
+   background-color: var(--basic-blue);
+   display: flex;
+   align-items: center;
+  justify-content: center;
+ }
+ .arrival input:hover,
+ .departure input:hover {
+  background-color: var(--basic-lighht-neutral);
+ }
+
+ .departure input:focus,
+ .arrival input:focus {
+   background-color: var(--basic-white);
+   outline-color: var(--basic-light);
+ }
+
+
+ .number-of-visiters button {
+   font-weight: 700;
+   font-size: 150%;
+   color: var(--basic-neutral);
+ }
+ .number-of-visiters button:hover,
+ .number-of-visiters button:focus {
+   color: var(--basic-black);
+ }
+
+ .number-of-visiters button:active {
+   color: var(--basic-blue);
+ }
+
+ .number__visiters {
+   display: flex;
+ }
+
+ .number__visiters input::-webkit-outer-spin-button,
+ .number__visiters input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+ }
+ .button-find-hotels:hover,
+ .button-find-hotels:focus {
+  background-color: var(--basic-dark-blue);
+ }
+ .button-find-hotels:active {
+  background-color: var(--basic-extra-dark-blue);
+ }
+ .button-find-hotels:active span {
+   opacity: 0.3;
+ }
+ .logo-academy:hover {
+  filter: invert(76%) sepia(22%) saturate(630%) hue-rotate(163deg) brightness(88%) contrast(85%);
+ }
+ .logo-academy:active {
+ filter: invert(86%) sepia(1%) saturate(997%) hue-rotate(281deg) brightness(88%) contrast(89%);
+ }
+
+ .arrival input[type="date"]::-webkit-calendar-picker-indicator,
+ .departure input[type="date"]::-webkit-calendar-picker-indicator {
+   background-image: url("../img/decor/calendar.svg");
+   filter: invert(77%) sepia(7%) saturate(8%) hue-rotate(0deg) brightness(89%) contrast(82%);
+ }
+
+.arrival input[type="date"]::-webkit-calendar-picker-indicator:hover,
+.departure input[type="date"]::-webkit-calendar-picker-indicator:hover{
+  filter: invert(0%) sepia(9%) saturate(12%) hue-rotate(220deg) brightness(108%) contrast(101%);
+  cursor: pointer;
+}
+.arrival input[type="date"]::-webkit-calendar-picker-indicator:active,
+.departure input[type="date"]::-webkit-calendar-picker-indicator:active {
+  filter: invert(74%) sepia(11%) saturate(1045%) hue-rotate(159deg) brightness(90%) contrast(91%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

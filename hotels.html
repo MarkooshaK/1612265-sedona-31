@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
     <head>
         <meta charset="utf-8" />
         <title>HTML Academy: Седона</title>
@@ -7,76 +7,79 @@
         <link rel="icon" href="img/favicon/favicon152.svg" type="image/svg+xml">
         <link rel="apple-touch-icon" href="img/favicon/favicon180.png">
         <link rel="manifest" href="manifest.webmanifest">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="blank.html">Информация</a></li>
-                    <li><a href="blank.html">Фото и видео</a></li>
-                    <li>
-                        <a href="index.html"><img src="img/logo.svg" width="138" height="70" alt="Логотип" /></a>
-                    </li>
-                    <li><a href="blank.html">Карта штата</a></li>
-                    <li><a>Гостиницы</a></li>
-                </ul>
-            </nav>
+    <body class="page-body">
+      <header class="main-header">
+        <nav class="main-nav">
+            <ul class="site-nav">
+                <li><a href="blank.html">Информация</a></li>
+                <li><a href="blank.html">Фото и видео</a></li>
+                <li>
+                    <a href="index.html" class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип" /></a>
+                </li>
+                <li><a href="blank.html">Карта штата</a></li>
+                <li><a href="hotels.html">Гостиницы</a></li>
+            </ul>
+        </nav>
         </header>
-        <main>
+        <main class="container">
             <h1>Поиск гостиницы в Седоне</h1>
-            <section>
+            <section class="hotels-filter">
                 <h2>Фильтр гостиниц</h2>
                 <form action="https://echo.htmlacademy.ru" method="POST">
-                    <fieldset>
+                    <fieldset class="infrastructure">
                         <legend>Инфраструктура:</legend>
-                        <ul>
+                        <ul class="list-infrastructure">
                             <li>
-                                <input type="checkbox" name="pool" id="infrastructure-pool" checked />
+                                <input class="checkbox" type="checkbox" name="pool" id="infrastructure-pool" checked />
                                 <label for="infrastructure-pool">Бассейн</label>
                             </li>
                             <li>
-                                <input type="checkbox" name="parking" id="infrastructure-parking" />
+                                <input class="checkbox" type="checkbox" name="parking" id="infrastructure-parking" />
                                 <label for="infrastructure-parking">Парковка</label>
                             </li>
                             <li>
-                                <input type="checkbox" name="wi-fi" id="infrastructure-wifi" />
+                                <input class="checkbox" type="checkbox" name="wi-fi" id="infrastructure-wifi" />
                                 <label for="infrastructure-wifi">Wi-Fi</label>
                             </li>
                         </ul>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="house-type">
                         <legend>Тип жилья:</legend>
-                        <ul>
+                        <ul class="list-house-type">
                             <li>
-                                <input type="checkbox" name="hotel" id="type-of-housing-hotel" checked />
+                                <input class="checkbox" type="checkbox" name="hotel" id="type-of-housing-hotel" checked />
                                 <label for="type-of-housing-hotel">Гостиница</label>
                             </li>
                             <li>
-                                <input type="checkbox" name="motel" id="type-of-housing-motel" checked />
+                                <input class="checkbox" type="checkbox" name="motel" id="type-of-housing-motel" checked />
                                 <label for="type-of-housing-motel">Мотель</label>
                             </li>
                             <li>
-                                <input type="checkbox" name="apartments" id="type-of-housing-apartments" checked />
+                                <input class="checkbox" type="checkbox" name="apartments" id="type-of-housing-apartments" checked />
                                 <label for="type-of-housing-apartments">Апартаменты</label>
                             </li>
                         </ul>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="cost-per-day">
                         <legend><label for="min-cost">Стоимость в сутки, ₽:</label></legend>
-                        <input type="number" name="mincost" id="min-cost" placeholder="от 0" />
-                        <input type="number" name="maxcost" placeholder="до 3000" /><br />
-                        <input type="range" min="0" max="5000" step="any" />
+                        <input class="cost min-cost" type="number" name="mincost" id="min-cost" placeholder="от 0" />
+                        <input class="cost max-cost" type="number" name="maxcost" placeholder="до 3000" /><br />
+                        <input class="cost range" type="range" min="0" max="5000" step="any" />
                     </fieldset>
-                    <button type="submit">Показать</button>
+                    <button class="button button-show-cost" type="submit">Показать</button>
                 </form>
             </section>
 
-            <section>
+            <section class="searching-results">
                 <h2>Результаты поиска гостиницы</h2>
-                <section>
+                <section class="searching-results-found">
                     <h3>Найдено:3</h3>
                     <form action="https://echo.htmlacademy.ru" method="GET">
-                        <fieldset>
+                        <fieldset class="found-sort">
                             <legend>Сортировка:</legend>
                             <ul>
                                 <li>
@@ -97,7 +100,7 @@
                     </form>
                 </section>
 
-                <ul>
+                <ul class="found-housing-list">
                     <li>
                         <a href="blank.html">
                             <img src="img/hotel.jpg" width="135" height="90" alt="Вид на алые горы рядом с гостиницей" />
@@ -105,9 +108,9 @@
                         </a>
                         <p>Гостиница</p>
                         <p>от 4000 р</p>
-                        <a href="blank.html" class="button">Подробнее</a>
-                        <a href="blank.html" class="button">Забронировать</a>
-                        <p>Рейтинг:8,5</p>
+                        <a href="blank.html" class="button button-more">Подробнее</a>
+                        <a href="blank.html" class="button button-to-book">Забронировать</a>
+                        <p class="rating">Рейтинг:8,5</p>
                     </li>
                     <li>
                         <a href="blank.html">
@@ -116,9 +119,9 @@
                         </a>
                         <p>Мотель</p>
                         <p>от 3000 р</p>
-                        <a href="blank.html" class="button">Подробнее</a>
-                        <a href="blank.html" class="button">Забронировать</a>
-                        <p>Рейтинг:8,9</p>
+                        <a href="blank.html" class="button button-more">Подробнее</a>
+                        <a href="blank.html" class="button button-to-book">Забронировать</a>
+                        <p class="rating">Рейтинг:8,9</p>
                     </li>
                     <li>
                         <a href="blank.html">
@@ -127,41 +130,43 @@
                         </a>
                         <p>Апартаменты</p>
                         <p>от 2000 р</p>
-                        <a href="blank.html" class="button">Подробнее</a>
-                        <a href="blank.html" class="button">Забронировать</a>
-                        <p>Рейтинг:9,2</p>
+                        <a href="blank.html" class="button button-more">Подробнее</a>
+                        <a href="blank.html" class="button button-to-book">Забронировать</a>
+                        <p class="rating">Рейтинг:9,2</p>
                     </li>
                 </ul>
             </section>
         </main>
 
-        <footer>
-            <section>
-                <h2>Контактные данные</h2>
-                <p>#VISITSEDONA</p>
-                <p><a href="tel:+78005558628">+7 800 555-86-28</a></p>
-            </section>
+        <footer class="main-footer">
+          <section class="сontact">
+              <h2>Контактные данные</h2>
+              <p>#VISITSEDONA</p>
+              <p><a href="tel:+78005558628">+7 800 555-86-28</a></p>
+          </section>
 
-            <section>
+           <section class="socials">
                 <h2>Социальные сети</h2>
                 <ul>
                     <li>
-                        <a href="#">Twitter</a>
+                        <a class="socials__item twitter" href="#"></a>
                     </li>
                     <li>
-                        <a href="#">Facebook</a>
+                        <a class="socials__item facebook" href="#"></a>
                     </li>
                     <li>
-                        <a href="#">YouTube</a>
+                        <a class="socials__item youtube" href="#"></a>
                     </li>
                 </ul>
             </section>
-
-            <p>
-                Website by
-                <a href="https://htmlacademy.ru/"><img src="img/logo_htmlacademy.svg" width="115" height="34" alt="logo htmlacademy" /></a>
-            </p>
+            <section class="academy">
+                <p>
+                    Website by
+                    <a href="https://htmlacademy.ru/"><img class="logo-academy" src="img/logo_htmlacademy.svg" width="115" height="34" alt="logo htmlacademy" /></a>
+                </p>
+            </section>
         </footer>
+
     </body>
 </html>
 
