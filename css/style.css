@@ -834,8 +834,9 @@ ul {
 
 .sort-type {
   display: flex;
-  width: 40%;
+  width: 26%;
   justify-content: space-between;
+  padding-left: 40px;
 }
 
 .button__sort .button__sort_lowest {
@@ -852,7 +853,6 @@ ul {
   display: flex;
   align-items: center;
   width: 100%;
-  justify-content: space-between;
 }
 
 .results .results__list {
