@@ -205,8 +205,21 @@ ul {
 .advantages__list2 {
   height: 330px;
   background-color: transparent;
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.housing {
+  grid-column: 1/2;
+}
+
+.food {
+  grid-column: 2/3;
+}
+
+.souvenirs {
+  grid-column: 3/4;
 }
 
 .advantages__list2 h4 {
