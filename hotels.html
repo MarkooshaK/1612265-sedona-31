@@ -13,22 +13,24 @@
     </head>
 
     <body class="page-body">
+      <div class="body-shadow">
         <header class="main-header">
             <nav class="main-nav">
                 <a href="index.html" class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип" /></a>
-                <ul class="site-nav">
+                <ul class="site-nav nav-list1">
                     <li><a href="blank.html">Информация</a></li>
                     <li><a href="blank.html">Фото и видео</a></li>
-                    <li></li>
+                </ul>
+                <ul class="site-nav nav-list2">
                     <li><a href="blank.html">Карта штата</a></li>
                     <li><a class="hotels active" href="#">Гостиницы</a></li>
                 </ul>
             </nav>
         </header>
         <main class="container">
-            <h1>Поиск гостиницы в Седоне</h1>
+            <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
             <section class="filter__hotels">
-                <h2>Фильтр гостиниц</h2>
+                <h2 class="visually-hidden">Фильтр гостиниц</h2>
                 <form class="form__hotels" action="https://echo.htmlacademy.ru" method="POST">
                     <div class="filter__grid">
                         <fieldset class="form__block1">
@@ -103,7 +105,13 @@
                                     <input class="cost max-cost" type="number" name="maxcost" placeholder="до 3000" />
                                 </div>
                                 <div class="range__container">
-                                    <input class="range" type="range" min="0" max="3000" step="any" />
+                                  <div class="range-controls">
+                                    <div class="scale">
+                                      <div class="bar" ></div>
+                                    </div>
+                                    <div class="toggle toggle-min" tabindex="0"></div>
+                                    <div class="toggle toggle-max" tabindex="0"></div>
+                                  </div>
                                 </div>
                             </fieldset>
                             <button class="button button-show-cost" type="submit">Показать</button>
@@ -113,7 +121,7 @@
             </section>
 
             <section class="results">
-                <h2>Результаты поиска гостиницы</h2>
+                <h2 class="visually-hidden">Результаты поиска гостиницы</h2>
                 <section class="results__content">
                     <h3>Найдено: 3</h3>
                     <form action="https://echo.htmlacademy.ru" method="GET">
@@ -155,24 +163,9 @@
                             </div>
                         </div>
                         <div class="rating__container">
-                            <div class="star-rating">
-                                <div class="star-rating__container">
-                                    <input type="radio" name="rating" id="rating-5" />
-                                    <label for="rating-5"></label>
-                                    <input type="radio" name="rating" id="rating-4" />
-                                    <label for="rating-4"></label>
-                                    <input type="radio" name="rating" id="rating-3" />
-                                    <label for="rating-3"></label>
-                                    <input type="radio" name="rating" id="rating-2" />
-                                    <label for="rating-2"></label>
-                                    <input type="radio" name="rating" id="rating-1" />
-                                    <label for="rating-1"></label>
-                                </div>
+                              <p class="rating">Рейтинг: 8,5</p>
+                              <span class="star-rating"><span class="star-rating"><span class="star-rating"><span class="star-rating"></span></span></span></span>
                             </div>
-                            <div class="number-rating">
-                                <p class="rating">Рейтинг: 8,5</p>
-                            </div>
-                        </div>
                     </div>
                     <div class="results__container results__container-item2">
                         <div class="results__block results__block-img">
@@ -193,7 +186,10 @@
                                 <a href="blank.html" class="button button-to-book">Забронировать</a>
                             </div>
                         </div>
-                        <p class="rating">Рейтинг: 8,9</p>
+                          <div class="rating__container">
+                            <p class="rating">Рейтинг: 8,9</p>
+                          <span class="star-rating"><span class="star-rating"><span class="star-rating"></span></span></span>
+                      </div>
                     </div>
                     <div class="results__container results__container-item3">
                         <div class="results__block results__block-img">
@@ -214,7 +210,10 @@
                                 <a href="blank.html" class="button button-to-book">Забронировать</a>
                             </div>
                         </div>
+                        <div class="rating__container">
                         <p class="rating">Рейтинг: 9,2</p>
+                        <span class="star-rating"><span class="star-rating"></span></span>
+                      </div>
                     </div>
                 </div>
             </section>
@@ -222,13 +221,13 @@
 
         <footer class="main-footer">
             <section class="сontact">
-                <h2>Контактные данные</h2>
+                <h2 class="visually-hidden">Контактные данные</h2>
                 <p>#VISITSEDONA</p>
                 <p><a href="tel:+78005558628">+7 800 555-86-28</a></p>
             </section>
 
             <section class="socials">
-                <h2>Социальные сети</h2>
+                <h2 class="visually-hidden">Социальные сети</h2>
                 <ul>
                     <li>
                         <a class="socials__item twitter" href="#"></a>
@@ -248,5 +247,6 @@
                 </p>
             </section>
         </footer>
+      </div>
     </body>
 </html>
