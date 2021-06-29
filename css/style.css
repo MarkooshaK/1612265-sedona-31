@@ -64,6 +64,10 @@ ul {
   margin: 0;
 }
 
+.page-body button {
+  cursor: pointer;
+}
+
 /* blank.html  */
 
 .wip {
@@ -97,6 +101,20 @@ ul {
   padding-right: 72px;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.site-nav a::before {
+  content: "";
+  width: 140px;
+  height: 56px;
+  display: block;
+  position: absolute;
+  bottom: -19px;
+  right: -25px;
+}
+
+.site-nav li a {
+  position: relative;
 }
 
 .site-nav li:nth-child(3) {
@@ -135,7 +153,7 @@ ul {
 }
 
 .nav-list1 {
-  width: 326px;
+  width: 325px;
   padding-right: 342px;
 }
 
@@ -227,8 +245,17 @@ ul {
 
 .advantages__list {
   display: flex;
-  height: 256px;
   justify-content: center;
+}
+
+.advantages__list_img1 li:last-child {
+  background: #9e785c;
+  display: flex;
+}
+
+.advantages__list_img2 li:first-child {
+  background: #9e785c;
+  display: flex;
 }
 
 .advantages__list2 {
@@ -313,6 +340,7 @@ ul {
   color: var(--basic-white);
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
 }
@@ -343,8 +371,21 @@ ul {
   display: flex;
   width: 1200px;
   margin: auto;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
+}
+
+.advantages-3 {
+  padding-left: 96px;
+  padding-right: 168px;
+}
+
+.advantages-4 {
+  padding-right: 148px;
+}
+
+.advantages-5 {
+  padding-right: 77px;
 }
 
 /* hotel search */
@@ -386,6 +427,8 @@ ul {
 
 .map {
   text-align: center;
+  display: flex;
+  background-color: #cadea9;
 }
 
 /* main-footer */
@@ -398,17 +441,59 @@ ul {
   line-height: 26px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   position: relative;
   align-items: center;
+  padding-left: 153px;
+  padding-right: 131px;
 }
 
 .main-footer .сontact {
   font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.сontact p {
+  margin: 0;
+}
+
+.сontact p:last-of-type a {
+  color:var(--basic-black)
+}
+
+.сontact p:first-of-type {
+  padding-top: 23px;
+  padding-bottom: 9px;
+}
+
+.сontact p:last-of-type {
+  padding-bottom: 36px;
+}
+
+.socials {
+  padding-left: 204px;
 }
 
 .academy p {
   font-size: 14px;
+  padding-left: 190px;
+  display: flex;
+}
+
+.academy a {
+  padding-left: 15px;
+}
+
+.socials li a {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.socials li:first-of-type,
+.socials li:nth-child(2) {
+  padding-right: 6px;
 }
 
 .socials__item {
@@ -452,9 +537,12 @@ ul {
 /* popap */
 
 .popap {
-  width: 568px;
   margin: 0 auto;
   background-color: white;
+  position: absolute;
+  top: 2162px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .popap form {
@@ -614,28 +702,56 @@ input[type=number] {
   filter: invert(86%) sepia(1%) saturate(997%) hue-rotate(281deg) brightness(88%) contrast(89%);
 }
 
-.arrival input[type="date"]::-webkit-calendar-picker-indicator, .departure input[type="date"]::-webkit-calendar-picker-indicator {
-  background-image: url("../img/decor/calendar.svg");
-  -webkit-filter: invert(77%) sepia(7%) saturate(8%) hue-rotate(0deg) brightness(89%) contrast(82%);
-  filter: invert(77%) sepia(7%) saturate(8%) hue-rotate(0deg) brightness(89%) contrast(82%);
+.logo-academy:focus {
+  -webkit-filter: invert(76%) sepia(22%) saturate(630%) hue-rotate(163deg) brightness(88%) contrast(85%);
+  filter: invert(76%) sepia(22%) saturate(630%) hue-rotate(163deg) brightness(88%) contrast(85%);
+  outline: none;
 }
 
-.arrival input[type="date"]::-webkit-calendar-picker-indicator:hover, .departure input[type="date"]::-webkit-calendar-picker-indicator:hover {
-  -webkit-filter: invert(0%) sepia(9%) saturate(12%) hue-rotate(220deg) brightness(108%) contrast(101%);
-  filter: invert(0%) sepia(9%) saturate(12%) hue-rotate(220deg) brightness(108%) contrast(101%);
-  cursor: pointer;
+.arrival, .departure {
+  position: relative;
 }
 
-.arrival input[type="date"]::-webkit-calendar-picker-indicator:active, .departure input[type="date"]::-webkit-calendar-picker-indicator:active {
-  -webkit-filter: invert(74%) sepia(11%) saturate(1045%) hue-rotate(159deg) brightness(90%) contrast(91%);
-  filter: invert(74%) sepia(11%) saturate(1045%) hue-rotate(159deg) brightness(90%) contrast(91%);
-}
+ .arrival input[type="date"]::-webkit-calendar-picker-indicator, .departure input[type="date"]::-webkit-calendar-picker-indicator {
+   opacity: 0;
+ }
+
+ .departure input,
+ .arrival input {
+   background: #F2F2F2 url(../img/decor/calendar.svg) no-repeat right;
+   background-position-x: 316px;
+ }
+
+ .departure input:hover,
+ .arrival input:hover {
+  background: #EBEBEB url(../img/decor/calendar-hover.svg) no-repeat right;
+  background-position-x: 316px;
+  border: none;
+ }
+
+ .departure input:active,
+ .arrival input:active {
+  background: #EBEBEB url(../img/decor/calendar-active.svg) no-repeat right;
+  background-position-x: 316px;
+  border: none;
+ }
+
+ input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+ }
 
 /*  hotels html  */
 
 .filter__hotels {
   background-image: url("../img/decor/background-blur.jpg");
-  height: 217px;
   color: var(--basic-white);
 }
 
@@ -667,6 +783,7 @@ input[type=number] {
   border-radius: 2px;
   color: var(--basic-white);
   line-height: 21px;
+  margin-bottom: 32px;
 }
 
 .form__block3 button:hover {
@@ -783,13 +900,13 @@ input[type=number] {
   grid-column: 1/2;
   margin: 0;
   padding: 0;
-  padding-left: 36%;
+  padding-left: 72px;
 }
 
 .form__block2 {
   grid-column: 2/4;
   margin: 0;
-  padding-left: 32%;
+  padding-left: 119px;
   padding-top: 0;
 }
 

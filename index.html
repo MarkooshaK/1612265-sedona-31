@@ -40,7 +40,7 @@
             <section class="advantages">
                 <h2 class="visually-hidden">Преимущества Седоны</h2>
                 <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-                <ul class="advantages__list">
+                <ul class="advantages__list advantages__list_img1">
                     <li class="advantages-1">
                         <h3>Настоящий городок</h3>
                         <p>— №1 —</p>
@@ -62,7 +62,7 @@
                         <p>Не только китайского, но и местного производства!</p>
                     </li>
                 </ul>
-                <ul class="advantages__list">
+                <ul class="advantages__list advantages__list_img2">
                     <li><img src="img/image1.jpg" width="800" height="256" alt="Оранжевые горные массивы" /></li>
                     <li class="advantages-2">
                         <h3>Там есть Мост дьявола</h3>
@@ -133,35 +133,36 @@
             </section>
         </footer>
 
-        <section class="popap">
-            <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-            <form action="https://echo.htmlacademy.ru" method="post">
-                <fieldset class="arrival">
-                    <label for="arrival-date">Дата заезда:</label>
-                    <input type="date" name="calendar" id="arrival-date" />
-                </fieldset>
-                <fieldset class="departure">
-                    <label for="date-of-departure">Дата выезда:</label>
-                    <input type="date" name="calendar" id="date-of-departure" />
-                </fieldset>
-                <fieldset class="number__visiters">
-                    <fieldset class="number-of-visiters number-of-visiters1">
-                        <label for="number-of-adults">Взрослые:</label>
-                        <button class="button button-adults-less" type="button">—</button>
-                        <input id="number-of-adults" type="number" name="adults" placeholder="1" />
-                        <button class="button button-adults-more" type="button">+</button>
-                    </fieldset>
-                    <fieldset class="number-of-visiters number-of-visiters2">
-                        <label for="number-of-childs">Дети:</label>
-                        <button class="button button-childs-less" type="button">—</button>
-                        <input id="number-of-childs" type="number" name="childs" placeholder="0" />
-                        <button class="button button-childs-more" type="button">+</button>
-                    </fieldset>
-                </fieldset>
-                <button class="button button-find-hotels" type="submit"><span>Найти</span></button>
-            </form>
-        </section>
+
       </div>
+      <section class="popap ">
+        <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="arrival">
+                <label for="arrival-date">Дата заезда:</label>
+                <input type="date" name="calendar" id="arrival-date" />
+            </fieldset>
+            <fieldset class="departure">
+                <label for="date-of-departure">Дата выезда:</label>
+                <input type="date" name="calendar" id="date-of-departure" />
+            </fieldset>
+            <fieldset class="number__visiters">
+                <fieldset class="number-of-visiters number-of-visiters1">
+                    <label for="number-of-adults">Взрослые:</label>
+                    <button class="button button-adults-less" type="button">—</button>
+                    <input id="number-of-adults" type="number" name="adults" placeholder="1" />
+                    <button class="button button-adults-more" type="button">+</button>
+                </fieldset>
+                <fieldset class="number-of-visiters number-of-visiters2">
+                    <label for="number-of-childs">Дети:</label>
+                    <button class="button button-childs-less" type="button">—</button>
+                    <input id="number-of-childs" type="number" name="childs" placeholder="0" />
+                    <button class="button button-childs-more" type="button">+</button>
+                </fieldset>
+            </fieldset>
+            <button class="button button-find-hotels" type="submit"><span>Найти</span></button>
+        </form>
+    </section>
     </body>
 </html>
 
