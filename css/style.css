@@ -1003,8 +1003,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .sort-list a {
   color: #c6c6c6;
   text-decoration: underline;
-  -webkit-text-decoration-style: dashed;
-  text-decoration-style: dashed;
+  -webkit-text-decoration-style: dotted;
+  text-decoration-style: dotted;
   -webkit-text-decoration-color: var(--basic-blue);
   text-decoration-color: var(--basic-blue);
 }
@@ -1012,8 +1012,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .sort-list a:hover, .sort-list a:focus {
   color: var(--basic-blue);
   text-decoration: underline;
-  -webkit-text-decoration-style: dashed;
-  text-decoration-style: dashed;
+  -webkit-text-decoration-style: dotted;
+  text-decoration-style: dotted;
   -webkit-text-decoration-color: var(--basic-blue);
   text-decoration-color: var(--basic-blue);
 }
