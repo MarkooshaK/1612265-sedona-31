@@ -435,7 +435,7 @@ ul {
 /* main-footer */
 
 .main-footer {
-  margin: -121px 0 0;
+  margin: -120px 0 0;
   line-height: 26px;
   background-color: rgba(255, 255, 255, 0.9);
   font-size: 21px;
@@ -755,6 +755,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .filter__hotels {
   background-image: url("../img/decor/background-blur.jpg");
+  background-color: #7395b8;
   color: var(--basic-white);
 }
 
@@ -1061,19 +1062,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .results__list .results__container {
-  padding-left: 6%;
-  padding-right: 6%;
+  padding-left: 73px;
+  padding-right: 73px;
 }
 
 .results__list .results__container {
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--basic-light);
-}
-
-.results__list .rating {
-  margin-left: 24%;
-  margin-top: 7%;
 }
 
 .number-rating {
