@@ -18,14 +18,16 @@
     <header class="main-header">
       <nav class="main-nav">
         <a class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип" /></a>
-        <ul class="site-nav nav-list1">
-          <li><a href="blank.html">Информация</a></li>
-          <li><a href="blank.html">Фото и видео</a></li>
-        </ul>
-        <ul class="site-nav nav-list2">
-          <li><a href="#map">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
-        </ul>
+        <div class="site-nav">
+          <ul class="nav-list1">
+            <li><a href="blank.html">Информация</a></li>
+            <li><a href="blank.html">Фото и видео</a></li>
+          </ul>
+          <ul class="nav-list2">
+            <li><a href="#map">Карта штата</a></li>
+            <li><a href="hotels.html">Гостиницы</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="container">
@@ -133,15 +135,15 @@
       <section class="academy">
         <p>
           Website by
-          <a href="https://htmlacademy.ru/"><img class="logo-academy" src="img/logo_htmlacademy.svg" width="115"
-              height="34" alt="logo htmlacademy" /></a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss"><img class="logo-academy" src="img/logo_htmlacademy.svg"
+              width="115" height="34" alt="logo htmlacademy" /></a>
         </p>
       </section>
     </footer>
 
 
   </div>
-  <section class="popap ">
+  <section class="popap visually-hidden">
     <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
     <form action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="arrival">
@@ -169,7 +171,7 @@
       <button class="button button-find-hotels" type="submit"><span>Найти</span></button>
     </form>
   </section>
-  <script src="js/js_modal.min.js"></script>
+  <script src="js/js-modal.min.js"></script>
 </body>
 
 </html>

@@ -82,6 +82,7 @@ ul {
 
 .main-header {
   position: relative;
+  z-index: 2;
 }
 
 .main-nav {
@@ -92,7 +93,7 @@ ul {
   background-color: var(--basic-white);
 }
 
-.site-nav {
+/* .site-nav {
   display: inline-flex;
   flex-wrap: wrap;
   align-content: center;
@@ -101,16 +102,42 @@ ul {
   padding-right: 72px;
   padding-top: 15px;
   padding-bottom: 15px;
+} */
+
+.site-nav {
+  display: flex;
 }
 
-.site-nav a::before {
-  content: "";
-  width: 140px;
-  height: 56px;
-  display: block;
-  position: absolute;
-  bottom: -19px;
-  right: -25px;
+.nav-list1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 50%;
+  padding: 15px 0;
+}
+
+.nav-list2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 50%;
+  padding: 15px 0;
+}
+
+.nav-list1 li:first-child {
+  padding-left: 72px;
+}
+
+.nav-list1 li:last-child {
+  padding-left: 134px;
+}
+
+.nav-list2 li:first-child {
+  padding-right: 147px;
+}
+
+.nav-list2 li:last-child {
+  padding-right: 72px;
 }
 
 .site-nav li a {
@@ -152,19 +179,12 @@ ul {
   transform: translateX(-50%);
 }
 
-.nav-list1 {
-  width: 325px;
-  padding-right: 342px;
-}
-
-.nav-list2 {
-  width: 312px;
-}
-
 /*  welcome section */
 
 .welcome-img {
-  background: url(../img/decor/welcome_decor.svg) no-repeat center bottom, url("../img/decor/welcome1.svg") no-repeat center 76px, url("../img/decor/welcome2.svg") no-repeat center 215px, transparent url("../img/decor/background-photo1.jpg") no-repeat center;
+  background: url("../img/decor/welcome1.svg") no-repeat center 76px, url("../img/decor/welcome2.svg") no-repeat center 215px, transparent url("../img/decor/background-photo1.jpg") no-repeat center;
+  -webkit-clip-path: polygon(0 450px, 250px 475px, 250px 450px, 600px 509px, 950px 450px, 950px 475px, 1200px 450px, 1200px 0px, 0px 0px);
+  clip-path: polygon(0 450px, 250px 475px, 250px 450px, 600px 509px, 950px 450px, 950px 475px, 1200px 450px, 1200px 0px, 0px 0px);
   height: 509px;
   width: 1200px;
   margin-bottom: 43px;
@@ -536,8 +556,7 @@ ul {
   opacity: 0.3;
 }
 
-.сontact p:first-of-type,
-.сontact p:last-of-type {
+.сontact p:first-of-type, .сontact p:last-of-type {
   padding-left: 5px;
 }
 
@@ -562,8 +581,8 @@ ul {
 .arrival {
   padding: 0;
   margin: 0;
-  padding-top: 55px;
-  padding-bottom: 29px;
+  margin-top: 55px;
+  margin-bottom: 29px;
 }
 
 .arrival input {
@@ -574,7 +593,7 @@ ul {
 .departure {
   padding: 0;
   margin: 0;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .departure input {
@@ -722,21 +741,26 @@ input[type=number] {
   opacity: 0;
 }
 
-.departure input, .arrival input {
-  background: #F2F2F2 url(../img/decor/calendar.svg) no-repeat right;
-  background-position-x: 316px;
+.arrival::before, .departure::before {
+  content: url(../img/decor/calendar.svg);
+  -webkit-filter: invert(77%) sepia(7%) saturate(8%) hue-rotate(0deg) brightness(89%) contrast(82%);
+  filter: invert(77%) sepia(7%) saturate(8%) hue-rotate(0deg) brightness(89%) contrast(82%);
+  position: absolute;
+  right: 0;
+  padding-right: 9px;
+  cursor: pointer;
 }
 
-.departure input:hover, .arrival input:hover {
-  background: #EBEBEB url(../img/decor/calendar-hover.svg) no-repeat right;
-  background-position-x: 316px;
-  border: none;
+.arrival:hover::before, .departure:hover::before {
+  -webkit-filter: invert(0%) sepia(12%) saturate(2245%) hue-rotate(158deg) brightness(91%) contrast(106%);
+  filter: invert(0%) sepia(12%) saturate(2245%) hue-rotate(158deg) brightness(91%) contrast(106%);
+  cursor: pointer;
 }
 
-.departure input:active, .arrival input:active {
-  background: #EBEBEB url(../img/decor/calendar-active.svg) no-repeat right;
-  background-position-x: 316px;
-  border: none;
+.arrival:active::before, .departure:active::before {
+  -webkit-filter: invert(74%) sepia(11%) saturate(1045%) hue-rotate(159deg) brightness(90%) contrast(91%);
+  filter: invert(74%) sepia(11%) saturate(1045%) hue-rotate(159deg) brightness(90%) contrast(91%);
+  cursor: pointer;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {

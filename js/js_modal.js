@@ -40,3 +40,5 @@ childs_decrease.addEventListener("click", function(childs) {
   document.getElementById("number-of-childs").value = value;
 });
 
+
+
