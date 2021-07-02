@@ -913,6 +913,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
+.range-controls .toggle:hover {
+transform: scale(1.21);
+transition: all .2s ease-in-out;
+}
+
 .range-controls .toggle-max {
   left: 250px;
 }
