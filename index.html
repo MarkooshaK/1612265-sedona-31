@@ -10,11 +10,12 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" />
   <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body class="page-body">
   <div class="body-shadow">
+
     <header class="main-header">
       <nav class="main-nav">
         <a class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип" /></a>
@@ -30,17 +31,20 @@
         </div>
       </nav>
     </header>
+
     <main class="container">
       <h1 class="visually-hidden">Туристический город Седона</h1>
       <div class="welcome-img">
         <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
       </div>
+
       <section class="welcome">
         <p>
           Седона — небольшой городок в Аризоне,<br />
           заслуживающий большего!
         </p>
       </section>
+
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества Седоны</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -108,10 +112,11 @@
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.13565760287!2d-111.83015798950274!3d34.85444381550229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1624984821740!5m2!1sru!2sru"
           width="1199" height="594" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
       </section>
     </main>
+
     <footer class="main-footer">
+
       <section class="сontact">
         <h2 class="visually-hidden">Контактные данные</h2>
         <p>#VISITSEDONA</p>
@@ -122,16 +127,17 @@
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul>
           <li>
-            <a class="socials__item twitter" href="#"></a>
+            <a class="socials__item twitter" aria-label="twitter" href="#"></a>
           </li>
           <li>
-            <a class="socials__item facebook" href="#"></a>
+            <a class="socials__item facebook" aria-label="facebook" href="#"></a>
           </li>
           <li>
-            <a class="socials__item youtube" href="#"></a>
+            <a class="socials__item youtube" aria-label="youtube" href="#"></a>
           </li>
         </ul>
       </section>
+
       <section class="academy">
         <p>
           Website by
@@ -140,19 +146,20 @@
         </p>
       </section>
     </footer>
-
-
   </div>
+
   <section class="popap visually-hidden">
     <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
     <form action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="arrival">
         <label for="arrival-date">Дата заезда:</label>
-        <input type="date" name="calendar" id="arrival-date" />
+        <input type="text" name="calendar" id="arrival-date" placeholder="24 апреля 2017"
+          onfocus="(this.type='date')" />
       </fieldset>
       <fieldset class="departure">
         <label for="date-of-departure">Дата выезда:</label>
-        <input type="date" name="calendar" id="date-of-departure" />
+        <input type="text" name="calendar" id="date-of-departure" placeholder="4 июля 2017"
+          onfocus="(this.type='date')" />
       </fieldset>
       <fieldset class="number__visiters">
         <fieldset class="number-of-visiters number-of-visiters1">

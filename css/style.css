@@ -55,7 +55,6 @@ ul li {
 
 a, button {
   text-decoration: none;
-  outline: none;
 }
 
 ul {
@@ -93,17 +92,6 @@ ul {
   background-color: var(--basic-white);
 }
 
-/* .site-nav {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-between;
-  padding-left: 72px;
-  padding-right: 72px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-} */
-
 .site-nav {
   display: flex;
 }
@@ -138,10 +126,6 @@ ul {
 
 .nav-list2 li:last-child {
   padding-right: 72px;
-}
-
-.site-nav li a {
-  position: relative;
 }
 
 .site-nav li:nth-child(3) {
@@ -185,6 +169,7 @@ ul {
   background: url("../img/decor/welcome1.svg") no-repeat center 76px, url("../img/decor/welcome2.svg") no-repeat center 215px, transparent url("../img/decor/background-photo1.jpg") no-repeat center;
   -webkit-clip-path: polygon(0 450px, 250px 475px, 250px 450px, 600px 509px, 950px 450px, 950px 475px, 1200px 450px, 1200px 0px, 0px 0px);
   clip-path: polygon(0 450px, 250px 475px, 250px 450px, 600px 509px, 950px 450px, 950px 475px, 1200px 450px, 1200px 0px, 0px 0px);
+  background-color: #6c859a;
   height: 509px;
   width: 1200px;
   margin-bottom: 43px;
@@ -279,11 +264,11 @@ ul {
 }
 
 .advantages__list2 {
-  height: 330px;
   background-color: transparent;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+  padding-top: 7px;
 }
 
 .housing {
@@ -389,6 +374,7 @@ ul {
 .advantages__list3 {
   background-color: var(--basic-light);
   display: flex;
+  flex-wrap: wrap;
   width: 1200px;
   margin: auto;
   justify-content: center;
@@ -396,7 +382,7 @@ ul {
 }
 
 .advantages-3 {
-  padding-left: 96px;
+  padding-left: 95px;
   padding-right: 167px;
 }
 
@@ -638,11 +624,25 @@ ul {
 
 .number-of-visiters input {
   background-color: var(--basic-light);
-  width: 33px;
+  width: 35px;
   height: 36px;
   text-align: center;
   font-weight: 700;
   outline: none;
+  margin: 0 -1px;
+}
+
+.arrival input::placeholder, .departure input::placeholder {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.arrival input::-moz-placeholder, .departure input::-moz-placeholder {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--basic-black);
+  opacity: 1;
 }
 
 .popap button {
@@ -699,10 +699,6 @@ ul {
 
 .number__visiters input::-webkit-outer-spin-button, .number__visiters input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
 }
 
 .button-find-hotels:hover, .button-find-hotels:focus {
@@ -763,7 +759,7 @@ input[type=number] {
   cursor: pointer;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
+.arrival input[type="date"]::-webkit-calendar-picker-indicator, .departure input[type="date"]::-webkit-calendar-picker-indicator {
   position: absolute;
   top: 0;
   left: 0;
@@ -781,6 +777,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-image: url("../img/decor/background-blur.jpg");
   background-color: #7395b8;
   color: var(--basic-white);
+  background-size: cover;
 }
 
 .form__block3 {
@@ -824,6 +821,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .cost__min-max {
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   border: 2px solid var(--basic-white);
@@ -846,7 +844,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background: var(--basic-white);
   display: block;
   position: absolute;
-  top: 121px;
+  top: 5px;
 }
 
 .cost__min-max input::-webkit-input-placeholder {
@@ -914,8 +912,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .range-controls .toggle:hover {
-transform: scale(1.21);
-transition: all .2s ease-in-out;
+  transform: scale(1.21);
+  transition: all .2s ease-in-out;
 }
 
 .range-controls .toggle-max {
@@ -1111,12 +1109,6 @@ transition: all .2s ease-in-out;
   margin: 0;
 }
 
-.star-rating::before {
-  content: url(../img/decor/Star-rating.svg);
-  width: 19px;
-  height: 19px;
-}
-
 .rating__container {
   display: flex;
   flex-wrap: wrap;
@@ -1129,8 +1121,22 @@ transition: all .2s ease-in-out;
 }
 
 .star-rating {
-  padding-bottom: 47px;
-  padding-left: 5px;
+  padding-bottom: 64px;
+}
+
+.star-rating_AmaraResort {
+  background: url(../img/decor/stars-4.svg) no-repeat;
+  padding-left: 89px;
+}
+
+.star-rating_DesertQuailInn {
+  background: url(../img/decor/stars-3.svg) no-repeat;
+  padding-left: 64px;
+}
+
+.star-rating_VillasatPocoDiablo {
+  background: url(../img/decor/stars-2.svg) no-repeat;
+  padding-left: 40px;
 }
 
 .results__block-img img {
@@ -1207,8 +1213,7 @@ transition: all .2s ease-in-out;
 }
 
 .results__list .button-more {
-  width: 110px;
-  height: 27px;
+  padding: 3px 17px;
   background-color: var(--basic-blue);
 }
 
@@ -1223,8 +1228,7 @@ transition: all .2s ease-in-out;
 
 .results__list .button-to-book {
   background-color: var(--special);
-  height: 27px;
-  width: 142px;
+  padding: 0 17px;
 }
 
 .results__list .button-to-book:hover, .results__list .button-to-book:focus {
@@ -1317,6 +1321,14 @@ transition: all .2s ease-in-out;
 
 .checkbox__container input:checked~.checkmark .checkbox__border-right::before, .checkbox__container input:checked~.checkmark .checkbox__border-right::after, .checkbox__container input:checked~.checkmark .checkbox__border-top::before, .checkbox__container input:checked~.checkmark .checkbox__border-top::after {
   content: '';
+}
+
+.checkbox__outline {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: -3px;
+  top: -3px;
 }
 
 .checkbox__border-right::before {

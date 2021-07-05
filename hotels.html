@@ -10,11 +10,12 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" />
   <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body class="page-body">
   <div class="body-shadow">
+
     <header class="main-header">
       <nav class="main-nav">
         <a href="index.html" class="main-header-logo"><img src="img/logo.svg" width="138" height="70"
@@ -31,8 +32,10 @@
         </div>
       </nav>
     </header>
+
     <main class="container">
       <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
+
       <section class="filter__hotels">
         <h2 class="visually-hidden">Фильтр гостиниц</h2>
         <form class="form__hotels" action="https://echo.htmlacademy.ru" method="POST">
@@ -43,8 +46,9 @@
                 <li>
                   <label class="checkbox__container" for="infrastructure-pool">
                     Бассейн
+                    <span class="checkbox__outline" tabindex="0"></span>
                     <input class="checkbox" type="checkbox" name="pool" id="infrastructure-pool" checked />
-                    <span class="checkmark">
+                    <span class="checkmark"  >
                       <span class="checkbox__border-right"><span class="checkbox__border-top"></span></span>
                     </span>
                   </label>
@@ -52,6 +56,7 @@
                 <li>
                   <label class="checkbox__container" for="infrastructure-parking">
                     Парковка
+                    <span class="checkbox__outline" tabindex="0"></span>
                     <input class="checkbox" type="checkbox" name="parking" id="infrastructure-parking" />
                     <span class="checkmark">
                       <span class="checkbox__border-right"><span class="checkbox__border-top"></span></span>
@@ -61,6 +66,7 @@
                 <li>
                   <label class="checkbox__container" for="infrastructure-wifi">
                     Wi-Fi
+                    <span class="checkbox__outline" tabindex="0"></span>
                     <input class="checkbox" type="checkbox" name="wi-fi" id="infrastructure-wifi" />
                     <span class="checkmark">
                       <span class="checkbox__border-right"><span class="checkbox__border-top"></span></span>
@@ -75,6 +81,7 @@
                 <li>
                   <label class="checkbox__container" for="type-of-housing-hotel">
                     Гостиница
+                    <span class="checkbox__outline" tabindex="0"></span>
                     <input class="checkbox" type="checkbox" name="hotel" id="type-of-housing-hotel" checked />
                     <span class="checkmark">
                       <span class="checkbox__border-right"><span class="checkbox__border-top"></span></span>
@@ -84,6 +91,7 @@
                 <li>
                   <label class="checkbox__container" for="type-of-housing-motel">
                     Мотель
+                    <span class="checkbox__outline" tabindex="0"></span>
                     <input class="checkbox" type="checkbox" name="motel" id="type-of-housing-motel" checked />
                     <span class="checkmark">
                       <span class="checkbox__border-right"><span class="checkbox__border-top"></span></span>
@@ -93,6 +101,7 @@
                 <li>
                   <label class="checkbox__container" for="type-of-housing-apartments">
                     Апартаменты
+                    <span class="checkbox__outline" tabindex="0"></span>
                     <input class="checkbox" type="checkbox" name="apartments" id="type-of-housing-apartments" checked />
                     <span class="checkmark">
                       <span class="checkbox__border-right"><span class="checkbox__border-top"></span></span>
@@ -109,12 +118,12 @@
                   <input class="cost max-cost" type="number" name="maxcost" placeholder="до 3000" />
                 </div>
                 <div class="range__container">
-                  <div class="range-controls">
+                  <div class="range-controls" aria-label="интерактивная шкала стоимости в сутки">
                     <div class="scale">
                       <div class="bar"></div>
                     </div>
-                    <div class="toggle toggle-min" tabindex="0"></div>
-                    <div class="toggle toggle-max" tabindex="0"></div>
+                    <div class="toggle toggle-min" tabindex="0" aria-label="ползунок минимальной стоимости"></div>
+                    <div class="toggle toggle-max" tabindex="0" aria-label="ползунок максимальной стоимости"></div>
                   </div>
                 </div>
               </fieldset>
@@ -126,6 +135,7 @@
 
       <section class="results">
         <h2 class="visually-hidden">Результаты поиска гостиницы</h2>
+
         <section class="results__content">
           <h3>Найдено: 3</h3>
           <form action="https://echo.htmlacademy.ru" method="GET">
@@ -139,9 +149,9 @@
                 </div>
                 <div class="button button__sort">
                   <button class="button button__sort_highest" type="submit" name="highest"
-                    value="highest">&#9650;</button>
+                    value="highest" aria-label="сортировка по возрастанию">&#9650;</button>
                   <button class="button button__sort_lowest button__sort_lowest-active" type="submit" name="lowest"
-                    value="lowest">&#9660;</button>
+                    value="lowest" aria-label="сортировка по убыванию">&#9660;</button>
                 </div>
               </div>
             </fieldset>
@@ -170,8 +180,7 @@
             </div>
             <div class="rating__container">
               <p class="rating">Рейтинг: 8,5</p>
-              <span class="star-rating"><span class="star-rating"><span class="star-rating"><span
-                      class="star-rating"></span></span></span></span>
+              <span class="star-rating star-rating_AmaraResort"></span>
             </div>
           </div>
           <div class="results__container results__container-item2">
@@ -195,7 +204,7 @@
             </div>
             <div class="rating__container">
               <p class="rating">Рейтинг: 8,9</p>
-              <span class="star-rating"><span class="star-rating"><span class="star-rating"></span></span></span>
+              <span class="star-rating star-rating_DesertQuailInn"></span>
             </div>
           </div>
           <div class="results__container results__container-item3">
@@ -219,7 +228,7 @@
             </div>
             <div class="rating__container">
               <p class="rating">Рейтинг: 9,2</p>
-              <span class="star-rating"><span class="star-rating"></span></span>
+              <span class="star-rating star-rating_VillasatPocoDiablo"></span>
             </div>
           </div>
         </div>
@@ -227,6 +236,7 @@
     </main>
 
     <footer class="main-footer">
+
       <section class="сontact">
         <h2 class="visually-hidden">Контактные данные</h2>
         <p>#VISITSEDONA</p>
@@ -237,16 +247,17 @@
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul>
           <li>
-            <a class="socials__item twitter" href="#"></a>
+            <a class="socials__item twitter" aria-label="twitter" href="#"></a>
           </li>
           <li>
-            <a class="socials__item facebook" href="#"></a>
+            <a class="socials__item facebook" aria-label="facebook" href="#"></a>
           </li>
           <li>
-            <a class="socials__item youtube" href="#"></a>
+            <a class="socials__item youtube" aria-label="youtube" href="#"></a>
           </li>
         </ul>
       </section>
+
       <section class="academy">
         <p>
           Website by
