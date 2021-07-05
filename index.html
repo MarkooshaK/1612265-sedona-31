@@ -10,7 +10,7 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" />
   <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body class="page-body">
@@ -148,17 +148,17 @@
     </footer>
   </div>
 
-  <section class="popap visually-hidden">
+  <section class="popup popup__hidden">
     <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-    <form action="https://echo.htmlacademy.ru" method="post">
+    <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="arrival">
         <label for="arrival-date">Дата заезда:</label>
-        <input type="text" name="calendar" id="arrival-date" placeholder="24 апреля 2017"
+        <input type="text" name="arrival" id="arrival-date" placeholder="24 апреля 2017"
           onfocus="(this.type='date')" />
       </fieldset>
       <fieldset class="departure">
         <label for="date-of-departure">Дата выезда:</label>
-        <input type="text" name="calendar" id="date-of-departure" placeholder="4 июля 2017"
+        <input type="text" name="departure" id="date-of-departure" placeholder="4 июля 2017"
           onfocus="(this.type='date')" />
       </fieldset>
       <fieldset class="number__visiters">
@@ -178,7 +178,7 @@
       <button class="button button-find-hotels" type="submit"><span>Найти</span></button>
     </form>
   </section>
-  <script src="js/js-modal.min.js"></script>
+  <script src="js/js_modal.min.js"></script>
 </body>
 
 </html>
