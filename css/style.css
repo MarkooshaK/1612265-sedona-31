@@ -668,6 +668,10 @@ input[type="date"]::-ms-clear {
   padding-right: 53px;
 }
 
+.cost__min-max input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .popup fieldset, .popup input {
   border: none;
   display: flex;
